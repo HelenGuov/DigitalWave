@@ -58,10 +58,15 @@ module.exports = {
 10. Add some code inside your entry script ./src/index.js 
 11. In package.json - change "main" as below:
   "main": "webpack.config.js",
- 
+
+
+###Installation for YoutubePlayer specific app
+12. install youtube api dependencies for fetch videos 
+npm install --save youtube-api-search
+
 ###Install package###
 If you pull for the first time, run code below, to make sure that all dependencies are installed
-npm install
+npm install --save youtube-api-search
 
 ###Build  Or Run###
 Build: npm run build
