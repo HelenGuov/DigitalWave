@@ -68,6 +68,15 @@ npm install --save youtube-api-search
 If you pull for the first time, run code below, to make sure that all dependencies are installed
 npm install --save youtube-api-search
 
+###install css file loader dependencies
+npm install --save-dev css-loader
+
+###Setup bootstrap dependencies 
+1. npm install --save bootstrap react-bootstrap
+2. In /src/index.js, add following:
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+ 
+
 ###Build  Or Run###
 Build: npm run build
 Run: npm start
