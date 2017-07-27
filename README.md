@@ -69,7 +69,13 @@ If you pull for the first time, run code below, to make sure that all dependenci
 npm install --save youtube-api-search
 
 ###install css file loader dependencies
-npm install --save-dev css-loader
+1. install from command: 
+npm install --save-dev css-loader 
+npm install --save boostrap react-bootstrap
+2. Edit src/index.js, add following: 
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+3. To use react-boostrap, import it in the file that needs to be used, for example:
+import {Button} from 'react-bootstrap'
 
 ###Setup bootstrap dependencies 
 1. npm install --save bootstrap react-bootstrap
