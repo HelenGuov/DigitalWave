@@ -17,15 +17,11 @@ class VideoList extends React.Component {
             (aVideo) => {
                 //assign onVideoClick as a function for the event handler video click 
                 return <VideoListItem
-                    onVideoClick={(vid) => { this.handleVideoClick(vid) }}
+                    onVideoClick={aVideo.handleVideoClick}
                     key={aVideo.etag}
                     video={aVideo} />
             });
         return htmlVideoItems
-    }
-
-    handleVideoClick(clickedVideo) {
-        console.log('clicked video ', clickedVideo.snippet.title);
     }
 
     render() {
