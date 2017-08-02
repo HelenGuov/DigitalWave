@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Col} from 'react-bootstrap';
 
+import style from './style.css';
 import YoutubeSearch from 'youtube-api-search';
-import VideoList from './videoList/video_list.jsx';
-import VideoPlayer from './videoPlayer/video_player.jsx';
+import VideoList from '../videoList/video_list.jsx';
+import VideoPlayer from '../videoPlayer/video_player.jsx';
 
 export default class App extends React.Component {
 
@@ -24,7 +26,7 @@ export default class App extends React.Component {
                 (aVideo) => { return this.assignHandleVideoClick(aVideo); }
             );
             this.setState({ videos: newVideos });
-            this.setState({ selectedVideo : newVideos[0]})
+            this.setState({ selectedVideo: newVideos[0] })
         });
     }
 
@@ -39,11 +41,12 @@ export default class App extends React.Component {
     }
     render() {
         if (this.state.videos.length == 0) return <div>loading now..</div>;
-        
+
         return (
+           
             <div>
-            <div> <VideoPlayer selectedVideo={this.state.selectedVideo} /> </div>
-            <div> <VideoList videos={this.state.videos} /></div>
+            <Col md={6}> <VideoPlayer selectedVideo={this.state.selectedVideo} /> </Col>
+            <Col md={6} className={style.videoList}> <VideoList videos={this.state.videos} /></Col>
             </div>
         );
     }

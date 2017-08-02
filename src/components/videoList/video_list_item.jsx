@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Media} from 'react-bootstrap'; 
-
+import './style.css'; 
 
 import style from './style.css';
 
@@ -21,13 +21,13 @@ export default class VideoListItem extends React.Component {
 
         //onClick={() => { this.props.onVideoClick(this.props.video) }
         return (
-            <li className={style.listItem} onClick={() => { this.props.onVideoClick(this.props.video) }}>    
-                <div className={style.listItemLeft}>
+              <Media.ListItem className="video-list-item" onClick={() => { this.props.onVideoClick(this.props.video) }}>    
+                <Media.Left>
                     <img src={this.state.thumbnail.url} height={this.state.thumbnail.Height}
                         width={this.state.thumbnail.Width} />
-                </div>
-                <div className={style.listItemRight}>{this.state.videoDetails.title}</div> 
-            </li>
+                </Media.Left>
+                <Media.Body>{this.state.videoDetails.title}</Media.Body> 
+            </Media.ListItem>
 
              
         );

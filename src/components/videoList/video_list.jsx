@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Media} from 'react-bootstrap';
+import { Media } from 'react-bootstrap';
+import './style.css'; 
 
 import VideoListItem from './video_list_item.jsx';
 
@@ -27,8 +28,10 @@ class VideoList extends React.Component {
 
     render() {
         return (
-            <ul>{this.getVideoItems()}</ul>
-            
+            <div className="video-list">
+                <Media.List>{this.getVideoItems()}</Media.List>
+            </div>
+
         );
     }
 }

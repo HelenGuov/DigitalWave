@@ -1,17 +1,7 @@
-.listItem {
-    list-style-type: none;
-    height: 110px;
+.video-list {
+    margin-left: 50px; 
 }
 
-.listItemLeft {
-    float: left;
-    max-width: 150px;
-    width: 20%; 
-    cursor: pointer;
-}
-
-.listItemRight {
-    float: left;
-    width: 80%;
-    cursor: pointer;
+.video-list-item {
+    cursor: pointer; 
 }
