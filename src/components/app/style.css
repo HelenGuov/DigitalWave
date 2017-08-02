@@ -1,8 +1,7 @@
-.videoPlayer {
-    width: 70%;
-
+.bottom-separator {
+    margin-bottom: 20px; 
 }
 
-.videoList {
-    width: 30%; 
+.left-separator {
+    margin-left: 50px; 
 }
