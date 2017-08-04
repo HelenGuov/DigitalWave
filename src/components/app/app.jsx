@@ -43,9 +43,7 @@ export default class App extends React.Component {
     }
 
     handleSearchSubmit(text) {
-        console.log('submit ', text); 
-        this.setState({ searchTerm : text }, () => this.fetchData()); 
-  
+        this.setState({ searchTerm : text }, () => this.fetchData());
     }
 
     render() {
@@ -53,16 +51,13 @@ export default class App extends React.Component {
 
         return (
             <div>
-                <div className="bottom-separator">
+                <div>
                     <SearchBar onSearchSubmit={term => this.handleSearchSubmit(term)} />
                 </div>
-                <div>
-                    
+                <div>             
                     <Col md={6}> <VideoPlayer selectedVideo={this.state.selectedVideo} /> </Col>
-                
                  
-                    <Col md={4} className="left-separator"> <VideoList videos={this.state.videos} /></Col>
-                   
+                    <Col md={4} className="left-separator"> <VideoList videos={this.state.videos} /></Col>             
                 </div>
             </div>
         );
