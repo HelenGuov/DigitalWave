@@ -19,7 +19,7 @@ export default class SearchBar extends React.Component {
         bootstrapUtils.addStyle(FormGroup, 'custom');
         return (
            
-            <Col mdOffset={3} md={6}>
+            <Col className="search-bottom-space" mdOffset={3} md={6}>
                 <Form inline onSubmit={(e) => {e.preventDefault(); this.handleFormSubmit(e)}}>
                     <FormGroup controlId="searchControl">
                         <FormControl onChange={(e) => this.handleInputChange(e)} type="text" 
